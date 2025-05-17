@@ -120,7 +120,7 @@ Node* DFS(Node* initial, int* cont){
   while(top(pila) != NULL){
     Node* arriba = top(pila);
     pop(pila);
-    if is_valid(arriba) return arriba;
+    if (is_valid(arriba))return arriba;
     List* adj = get_adj_nodes(arriba);
     Node* aux = first(adj);
     while(aux != NULL){
