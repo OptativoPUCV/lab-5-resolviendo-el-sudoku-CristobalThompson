@@ -48,23 +48,20 @@ int is_valid(Node* n){
                             //0, 1, 2, 3, 4, 5, 6, 7, 8, 9 
       //int diccionarioF[10] = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
       //int diccionarioC[10] = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-      int diccionarioF[10] = {-1};
-      int diccionarioC[10] = {-1};
+      int diccionarioF[10] = {0};
+      int diccionarioC[10] = {0};
 
       for(int pos = 0; pos < 9; ++pos){
         int valorF = n->sudo[indice][pos];
         int valorC = n->sudo[pos][indice];
-        if (diccionarioF[valorF] == -1)
-          diccionarioF[valorF] = valorF;
+        if (diccionarioF[valorF] == 0)
+          diccionarioF[valorF] = 1;
         else return 0;
 
-        if (diccionarioC[valorC] == -1)
-          diccionarioC[valorC] = valorC;
+        if (diccionarioC[valorC] == 0)
+          diccionarioC[valorC] = 1;
         else return 0;
-
       }
-      if (diccionarioF[0] != -1 || diccionarioC[0] != -1)
-        return 0;
     }
     return 1;         
 }
