@@ -57,7 +57,7 @@ int is_valid(Node* n){
         else return 0;
 
         if (diccionarioC[valorC] == 0)
-          diccionarioC[valorC] = valorF;
+          diccionarioC[valorC] = valorC;
         else return 0;
       }
     }
