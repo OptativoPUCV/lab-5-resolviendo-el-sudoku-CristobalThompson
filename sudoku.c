@@ -115,6 +115,20 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
+  Stack* pila = createStack();
+  push(pila, initial);
+  while(top(pila) != NULL){
+    Node* arriba = top(pila);
+    pop(pila);
+    if is_valid(arriba) return arriba;
+    List* adj = get_adj_nodes(arriba);
+    Node* aux = first(adj);
+    while(aux != NULL){
+      push(pila, aux);
+      aux = next(adj);
+    }
+    free(arriba);
+  }
   return NULL;
 }
 

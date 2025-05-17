@@ -131,3 +131,18 @@ Sat, May 17, 2025 12:25:17 PM:
  tests:  7|1
 total_score: 55/70
 b8cb5ca
+Sat, May 17, 2025  1:18:04 PM: 
+ sudoku.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function 'DFS':
+sudoku.c:123:8: error: expected '(' before 'is_valid'
+  123 |     if is_valid(arriba) return arriba;
+      |        ^~~~~~~~
+      |        (
+test.c: At top level:
+test.c:7:8: warning: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+    7 | char * _strdup(const char * str) {
+      |        ^~~~~~~
+09f9b90
