@@ -52,13 +52,17 @@ int is_valid(Node* n){
       for(int pos = 0; pos < 9; ++pos){
         int valorF = n->sudo[indice][pos];
         int valorC = n->sudo[pos][indice];
-        if (diccionarioF[valorF] == 0)
-          diccionarioF[valorF] = 1;
-        else return 0;
+        if (valorF != 0){
+          if (diccionarioF[valorF] == 0)
+            diccionarioF[valorF] = 1;
+          else return 0;
+        }
 
-        if (diccionarioC[valorC] == 0)
-          diccionarioC[valorC] = 1;
-        else return 0;
+        if (valorC != 0){
+          if (diccionarioC[valorC] == 0)
+            diccionarioC[valorC] = 1;
+          else return 0;
+        }
       }
     }
     return 1;
