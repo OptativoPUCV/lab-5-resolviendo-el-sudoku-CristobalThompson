@@ -61,8 +61,8 @@ int is_valid(Node* n){
         else return 0;
 
       }
-      if (diccionarioF[0] != -1 || diccionarioC[0] != -1)
-        return 0;
+      //if (diccionarioF[0] != -1 || diccionarioC[0] != -1)
+        //return 0;
     }
     return 1;         
 }
