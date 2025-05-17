@@ -55,11 +55,11 @@ int is_valid(Node* n){
         int valorF = n->sudo[indice][pos];
         int valorC = n->sudo[pos][indice];
         if (diccionarioF[valorF] == 0)
-          diccionarioF[valorF] = 1;
+          diccionarioF[valorF] = valorF;
         else return 0;
 
         if (diccionarioC[valorC] == 0)
-          diccionarioC[valorC] = 1;
+          diccionarioC[valorC] = valorF;
         else return 0;
       }
     }
