@@ -53,7 +53,7 @@ List* get_adj_nodes(Node* n){
     List* list=createList();
     int fila,col = -1;
     for(int k = 0; k < 9; ++k){
-      for(int j = 0; j < 9; ++k){
+      for(int j = 0; j < 9; ++j){
         if (n->sudo[k][j] == 0){
           fila = k;
           col = j;
