@@ -63,8 +63,8 @@ int is_valid(Node* n){
           else return 0;
       }
       for(int p=0;p<9;p++){
-        int i=3*(pos/3) + (p/3);
-        int j=3*(pos%3) + (p%3);
+        int i=3*(indice/3) + (p/3);
+        int j=3*(indice%3) + (p%3);
         int valorSub = n->sudo[i][j];
 
         if (diccionarioSub[valorSub] == 0)
