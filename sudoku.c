@@ -45,9 +45,7 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
     for(int indice = 0; indice < 9; ++indice){
-                            //0, 1, 2, 3, 4, 5, 6, 7, 8, 9 
-      //int diccionarioF[10] = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-      //int diccionarioC[10] = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+      //0, 1, 2, 3, 4, 5, 6, 7, 8, 9 
       int diccionarioF[10] = {0};
       int diccionarioC[10] = {0};
 
