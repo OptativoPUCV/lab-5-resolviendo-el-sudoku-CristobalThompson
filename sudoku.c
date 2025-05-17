@@ -43,10 +43,11 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){   //0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+int is_valid(Node* n){
     for(int indice = 0; indice < 9; ++indice){
-      int diccionarioF[10] = {0};
-      int diccionarioC[10] = {0};
+                            //0, 1, 2, 3, 4, 5, 6, 7, 8, 9 
+      int diccionarioF[10] = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+      int diccionarioC[10] = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
       for(int pos = 0; pos < 9; ++pos){
         int valorF = n->sudo[indice][pos];
@@ -60,6 +61,8 @@ int is_valid(Node* n){   //0, 1, 2, 3, 4, 5, 6, 7, 8, 9
         else return 0;
 
       }
+      if (diccionarioF[0] != -1 || diccionarioC[0] != -1)
+        return 0;
     }
     return 1;         
 }
