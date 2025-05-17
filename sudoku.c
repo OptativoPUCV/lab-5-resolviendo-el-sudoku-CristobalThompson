@@ -62,7 +62,8 @@ int is_valid(Node* n){
             diccionarioC[valorC] = valorC;
           else return 0;
       }
-      for(int p=0;p<9;p++){
+
+      for(int p = 0; p < 9; ++p){
         int i=3*(indice/3) + (p/3);
         int j=3*(indice%3) + (p%3);
         int valorSub = n->sudo[i][j];
@@ -95,7 +96,8 @@ List* get_adj_nodes(Node* n){
     for(int adj = 1; adj <= 9; ++adj){
       Node* new = copy(n);
       new->sudo[fila][col] = adj;
-      pushBack(list, new);
+      if (is_valid(new))
+        pushBack(list, new);
     }
 
     return list;
